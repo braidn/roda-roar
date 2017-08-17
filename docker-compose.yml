@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    image: braidn/ruby-full-stack:2.3.1
+    command: bundle exec shotgun --port 3000 --host '0.0.0.0'
+    container_name: roda_test_app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/src/repo
+      - bundle_cache:/src/repo/.bundle
+    tty: true
+    stdin_open: true
+
+volumes:
+  bundle_cache:
