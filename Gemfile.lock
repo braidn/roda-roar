@@ -6,6 +6,7 @@ GEM
     declarative-option (0.1.0)
     minitest (5.9.1)
     multi_json (1.12.1)
+    pg (0.21.0)
     rack (2.0.1)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -29,6 +30,7 @@ DEPENDENCIES
   byebug
   minitest
   multi_json
+  pg
   rack-test
   roar
   roda

@@ -6,6 +6,7 @@ gem 'multi_json'
 gem 'roar'
 gem 'roda'
 gem 'sequel'
+gem 'pg'
 
 group :development, :test do
   gem 'byebug'
