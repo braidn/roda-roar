@@ -1,0 +1,6 @@
+development:
+  adapter: postgres
+  database: roda_roar
+  user: postgres
+  password: oneUpmanShip
+  host: db
