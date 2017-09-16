@@ -16,6 +16,9 @@ GEM
       uber (< 0.2.0)
     roar (1.1.0)
       representable (~> 3.0.0)
+    roar-jsonapi (0.0.3)
+      representable (~> 3.0, >= 3.0.3)
+      roar (~> 1.1)
     roda (2.19.0)
       rack
     sequel (4.49.0)
@@ -33,6 +36,7 @@ DEPENDENCIES
   pg
   rack-test
   roar
+  roar-jsonapi
   roda
   sequel
   shotgun
