@@ -1,8 +1,9 @@
 require 'minitest/autorun'
+require './test/fabricators/user_fabricator'
 require './repo/models/user'
 
 describe User do
-  it 'is instantiatable' do
-    User.new.must_be_instance_of User
+  it 'has a valid factory' do
+    Fabricate(:user).must_be_instance_of User
   end
 end
