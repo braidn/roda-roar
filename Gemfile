@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem 'fabrication'
 gem 'multi_json'
 gem 'pg'
 gem 'roar'

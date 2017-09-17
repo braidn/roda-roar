@@ -4,6 +4,7 @@ GEM
     byebug (9.0.6)
     declarative (0.0.9)
     declarative-option (0.1.0)
+    fabrication (2.16.3)
     minitest (5.9.1)
     multi_json (1.12.1)
     pg (0.21.0)
@@ -31,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  fabrication
   minitest
   multi_json
   pg
