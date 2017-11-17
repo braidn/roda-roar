@@ -18,4 +18,10 @@ This, and Cells is completely broken in any every release.
 ROAR is a great representation layer for JSON quite a few adapters. 
 The frontend for this app will likely use Elm to keep tooling to a minimum.
 
+## Setup
+
+1. `docker-compose web bundle install` to install required gems.
+1. `bin/migrate` to create and migrate the database.
+1. `bin/test` to run the test suite.
+
 [1]: https://github.com/trailblazer/trailblazer
