@@ -20,7 +20,8 @@ The frontend for this app will likely use Elm to keep tooling to a minimum.
 
 ## Setup
 
-1. `docker-compose web bundle install` to install required gems.
+1. `docker-compose --rm web bundle install` to install required gems.
+1. `docker-compose --rm web` to start the db and web containers
 1. `bin/db_create` to create the dev database.
 1. `bin/db_create test` to create the test database
 1. `bin/db_migrate` to migrate the dev database.
