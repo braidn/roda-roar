@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'rack/test'
+require 'mocha/mini_test'
 
 require './app.rb'
 require './test/fabricators/user_fabricator'
@@ -17,11 +18,10 @@ describe Users do
 
   before do
     @user = Fabricate(:user)
+    User.expects(:all).returns([@user])
 
-    User.stub :all, [@user] do
-      header 'Accept', 'application/vnd.api+json'
-      get '/users'
-    end
+    header 'Accept', 'application/vnd.api+json'
+    get '/users'
   end
 
   after(:all) do
