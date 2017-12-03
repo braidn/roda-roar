@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ -z "$1" ]]; then
-  docker exec -it rodaroar_db_1 createdb -U postgres roda_roar_test
+  docker exec -it roda_roar_db createdb -U postgres roda_roar_test
 else
-  docker exec -it rodaroar_db_1 createdb -U postgres roda_roar
+  docker exec -it roda_roar_db createdb -U postgres roda_roar
 fi

@@ -33,6 +33,7 @@ services:
       - db
   db:
     image: kiasaki/alpine-postgres:9.5
+    container_name: roda_roar_db
     volumes:
       - pg_data:/var/lib/postgresql/data
     environment:
