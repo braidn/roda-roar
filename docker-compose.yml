@@ -3,7 +3,7 @@ services:
   web:
     image: braidn/ruby-full-stack:2.3.4
     command: bundle exec shotgun --port 3000 --host '0.0.0.0'
-    container_name: roda_test_app
+    container_name: roda_roar_app
     ports:
       - 3000:3000
     volumes:
@@ -13,6 +13,22 @@ services:
     stdin_open: true
     environment:
       DATABASE_URL: postgres://postgres@db:5432/roda_roar
+    depends_on:
+      - db
+  test:
+    image: braidn/ruby-full-stack:2.3.4
+    command: bundle exec ruby -I . -e "require 'minitest/autorun'; Dir.glob('./test/**/*_test.rb') { |f| require(f) }"
+    container_name: roda_roar_app_test
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/src/repo
+      - bundle_cache:/src/repo/.bundle
+    tty: true
+    stdin_open: true
+    environment:
+      DATABASE_URL: postgres://postgres@db:5432/roda_roar_test
+      RACK_ENV: test
     depends_on:
       - db
   db:
