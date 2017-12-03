@@ -1,4 +1,3 @@
-require 'minitest/autorun'
 require './test/fabricators/user_fabricator'
 require './representers/users_representer'
 

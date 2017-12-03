@@ -1,4 +1,3 @@
-require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
 
