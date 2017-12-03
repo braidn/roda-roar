@@ -22,6 +22,7 @@ The frontend for this app will likely use Elm to keep tooling to a minimum.
 
 1. `docker-compose web bundle install` to install required gems.
 1. `bin/migrate` to create and migrate the database.
-1. `bin/test` to run the test suite.
+1. `bin/migrate test` to migrate the test database.
+1. `docker-compose --rm test` to run the test suite.
 
 [1]: https://github.com/trailblazer/trailblazer
