@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'fabrication'
+gem 'mocha'
 gem 'multi_json'
 gem 'pg'
 gem 'roar'
